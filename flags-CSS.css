@@ -72,43 +72,62 @@ h1,h2,h3{
 	 margin-left:5px;
 	 margin-right:5px;
 	 float: left;
-}
-
-.menu{
-	/**floating the menu to the right will orgnainz the list in horzintal way rather than the default vertical style */
-float:right;
-margin:0;
-padding:5px;
-}
-.menu li a{
-	color: white;
-	text-decoration: none;
-}
-#sub:hover + #hideMenu{
-	display: block;
-}
-#flagsOnTop{
-	background-image:url("https://internal.cs.ncl.ac.uk/modules/2013-14/csc8004/flags/css/flags.png");
-	background-repeat: no-repeat;
-	width: 290px;
-	height: 100px;
-	float:right;
+	 /*i added overflow hidden to cut off the part of the  dropdown list that extends outside the content div */
+	 overflow:hidden;
 }
 #navbar {
+	/*moves the bar to the top of the screen*/
 	bottom:155px;
     float:right;
     background-color: #5D2C2C;
     position: relative;
 	min-width:100%;
-	margin-bottom: 10px;
-	display: block;
-	margin: 0;
 	padding:0;
 	
 }
 #navbar li {
+	/*this will cause the elements of the list to have horzintal order rather than the normal vertical order of lists*/
     float:left;
+    padding-right:5px;
+    padding-left:5px;
+    list-style:none;
 }
+
+#navbar li a {
+	/*CHANGE THE COLOR OF THE links text and text decoration*/
+		color: #C7C1C1;
+		text-decoration: none;
+}
+.menu{
+	/*move the menu to the right side of the its #navbar element*/
+	float:right;
+	margin:0;
+	padding:5px;
+}
+/*hide the sublist of the last element of the menu*/
+#hideMenu{
+	position:absolute;
+	display: none;
+	background-color: #5D2C2C;
+	top:32px;
+	padding:0px 62px 0px 0px;
+}
+
+#hideMenu li{
+	float: none;
+	text-align: left;
+	/*this was used to avoid the text wrapping*/
+	white-space: nowrap;
+	
+}
+
+/*when user hovers on the sub element which is the parent of the hidden list, the hidden menu appears by changing it's 
+it's display value to block*/
+#sub:hover + #hideMenu{
+	display: block;
+}
+
+
 /*this div contains the h1 tag that has the word "Flags" in it and the image of flags attached on astring to the right of it  */
 #FirstBlock{
 	display:block;
@@ -116,50 +135,45 @@ padding:5px;
     border-bottom:solid 20px #5D2C2C;
     float:left;
     min-width: 100%;
-    /*so it does not  cross the navigation bar*/
+    /*margin top was set so that the  navigation bar does not  cover it  */
     margin-top:30px;
 }
-
 #FirstBlock h1{
+	/*float was used to keep the style consistent and to avoid the h1 showing above the 
+	navbar*/
 	float:left;
 	padding-left:20px;
 }
-#hideMenu{
-	position:absolute;
-	display: none;
-	background-color: #5D2C2C;
-
-	padding:5px 50px 0px 6px;
+/*a span to add the image of flags on the top of the screen beneath the menu*/
+#flagsOnTop{
+	background-image:url("https://internal.cs.ncl.ac.uk/modules/2013-14/csc8004/flags/css/flags.png");
+	background-repeat: no-repeat;
+	width: 290px;
+	height: 100px;
+	float:right;
 }
 
-#hideMenu li{
-	float: none;
-	text-align: left;
-	white-space: nowrap;
-	
-}
-
+/*give all hr elements a color and padding*/
 hr{
     border-color:#5D2C2C;
     padding:10px;
     background-color:#5D2C2C;
     
 }
-#navbar li {
-    text-decoration:none;
-    padding-right:5px;
-    padding-left:5px;
-    list-style:none;
-}
+
 
 #videobox {
 	display:block;
     float:right;
+    /*the padding was used to adjust the object element in the videobox Div and to let appear as if 
+    it's in the box*/
     padding-top:15px;
     background-image:url("https://internal.cs.ncl.ac.uk/modules/2013-14/csc8004/flags/css/460x320-box.png");
 	background-repeat: no-repeat;
 	width: 460px;
 	height: 320px;
+	/*text-align was used to force the object element and the text beneath it to show up in the center
+	of the video box div*/
 	text-align:center;
 	margin-right:8px;
     
@@ -170,13 +184,17 @@ hr{
 	padding-bottom: 20px;
 }
 #letters{
+	/*the top border will have a reddish bar that will be viewed as on the hr dividers*/
    border-top:solid 20px #5D2C2C;
    margin-top:10px;
+   float:left;
   
 }
+
 #letters p{
     float:left;
     padding:10px;
+    /*This will give the make the text all capitals butthe first letter in each word will have a bigger size */
      font-variant:small-caps;
     font-weight:bold;
 }
@@ -185,6 +203,7 @@ hr{
 
 #numbers{
     display:block;
+    /*the top border will have a reddish bar that will be viewed as on the hr dividers*/
      border-top:solid 20px #5D2C2C;
       float:left;
 }
@@ -192,7 +211,8 @@ hr{
 	padding-right:10px;
 }
 #numbers p{
-    display:inline-block;
+   float:left;
+    /*This will give the make the text all capitals butthe first letter in each word will have a bigger size */
     font-variant:small-caps;
     font-weight:bold;
     
