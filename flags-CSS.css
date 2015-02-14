@@ -1,0 +1,192 @@
+﻿html{
+	padding:0;
+	margin:0;
+}
+body {
+    padding:0;
+    margin-left:auto;
+    margin-right:auto;
+    min-width:450px;
+    max-width:960px;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color:#C7C1C1;
+    font-family: "Palatino Linotype";
+}
+p{
+	padding-left:5px;
+}
+h1,h2,h3{
+	color: #9F9A9A;
+	font-family: "Lucida Sans Unicode";
+}
+.box{
+	background-image:url("https://internal.cs.ncl.ac.uk/modules/2013-14/csc8004/flags/css/12-dkgrey.png");
+	width: 13px;
+	height: 13px;
+	display: block;
+	float:left;
+	background-position:bottom;
+	top:11px;
+	position:relative;
+	margin-right:8px;
+	margin-left:8px;
+}
+#content{
+	 background-color:#FFFFFF;
+	 min-height: 100%;
+	 margin-left:5px;
+	 margin-right:5px;
+	 float: left;
+}
+.menu{
+float:right;
+margin:0;
+padding:5px;
+}
+.menu li a{
+	color: white;
+	text-decoration: none;
+}
+#sub:hover + #hideMenu{
+	display: block;
+}
+#flagsOnTop{
+	background-image:url("https://internal.cs.ncl.ac.uk/modules/2013-14/csc8004/flags/css/flags.png");
+	background-repeat: no-repeat;
+	width: 290px;
+	height: 100px;
+	float:right;
+}
+#navbar {
+	bottom:155px;
+    float:right;
+    background-color: #5D2C2C;
+    position: relative;
+	min-width:100%;
+	margin-bottom: 10px;
+	display: block;
+	margin: 0;
+	padding:0;
+	
+}
+#navbar li {
+    float:left;
+}
+/*this div contains the h1 tag that has the word "Flags" in it and the image of flags attached on astring to the right of it  */
+#FirstBlock{
+	display:block;
+	/*this part is for creating a #5D2C2C colored border*/
+    border-bottom:solid 20px #5D2C2C;
+    float:left;
+    min-width: 100%;
+    /*so it does not  cross the navigation bar*/
+    margin-top:30px;
+}
+
+#FirstBlock h1{
+	float:left;
+}
+#hideMenu{
+	position:absolute;
+	display: none;
+	background-color: #5D2C2C;
+
+	padding:5px 50px 0px 6px;
+}
+
+#hideMenu li{
+	float: none;
+	text-align: left;
+	white-space: nowrap;
+	
+}
+
+hr {
+    border-color:#5D2C2C;
+    padding:10px;
+    background-color:#5D2C2C;
+}
+#navbar li {
+    text-decoration:none;
+    padding-right:5px;
+    padding-left:5px;
+    list-style:none;
+}
+
+#videobox {
+	 display:block;
+    float:right;
+    margin-bottom: 20px;
+}
+
+#maritime{
+	padding-bottom: 20px;
+}
+#letters{
+   border-top:solid 20px #5D2C2C;
+   margin-top:10px;
+}
+#letters p{
+    float:left;
+    padding:10px;
+}
+#numbers{
+    display:block;
+     border-top:solid 20px #5D2C2C;
+      float:left;
+}
+#numbers p{
+    display:inline-block;
+    
+}
+#footer{
+    float:left;
+    min-width:100%;
+
+}
+/*float for this div so the national div   can encompass the national flag image which also has a float property*/
+#national{
+	float: left;	
+}
+/*move text to the left side of parent div to make space for the image to fit on hte right side*/
+#nationalText{
+	display: inline;
+	float: left;
+	width: 56%;
+}
+
+/*image for national flags section*/
+#nationalFlags{
+	background-image:url("https://internal.cs.ncl.ac.uk/modules/2013-14/csc8004/flags/css/3-flags75.png");
+	background-repeat: no-repeat;
+	width: 415px;
+	height: 200px;
+	float:right;
+	display: inline-block;
+	
+}
+
+/*photobadge background image*/
+#photobadge{
+	background-image:url("https://internal.cs.ncl.ac.uk/modules/2013-14/csc8004/flags/css/420x370-box.png");
+	background-repeat: no-repeat;
+	width: 420px;
+	height: 370px;
+	background-position:left top;
+	float:right;
+	/*background image was getting cut off from the right and top side so adding paddings to top and left solved the issue*/
+	padding-left:20px;
+	padding-top:20px;
+
+}
+/*this is part of solving the background image getting cut off*/
+.flickrImage {
+   margin: 0;
+   padding: 0;
+}
+
+/*this is to move the text at the end to the right*/
+#referenceText{
+	float:right;
+}
