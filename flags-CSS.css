@@ -115,10 +115,18 @@ hr {
 }
 
 #videobox {
-	 display:block;
+	display:block;
     float:right;
-    margin-bottom: 20px;
+    padding-top:40px;
+    background-image:url("https://internal.cs.ncl.ac.uk/modules/2013-14/csc8004/flags/css/460x320-box.png");
+	background-repeat: no-repeat;
+	width: 460px;
+	height: 320px;
+	background-position: top right;
+	text-align:center;
+    
 }
+
 
 #maritime{
 	padding-bottom: 20px;
@@ -189,4 +197,9 @@ hr {
 /*this is to move the text at the end to the right*/
 #referenceText{
 	float:right;
+}
+#videoText{
+	margin-left:auto;
+	margin-right:auto;
+	width:123px;
 }
